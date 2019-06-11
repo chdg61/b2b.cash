@@ -1,0 +1,17 @@
+<app-search-film-form
+    [films]="searchFilms"
+    (changeQuery)="changeQuery($event)"
+    (selected)="selectedFilm($event)"
+></app-search-film-form>
+<app-list-films-container>
+    <app-list-films-item
+        *ngFor="let film of filmStorage.getValues()"
+        [film]="film"
+        (clickDetail)="toDetail($event)"
+        (clickDelete)="deleteFilm($event)"
+    ></app-list-films-item>
+    <div class="not-found" *ngIf="filmStorage.count === 0">
+        Нет фильмов в списке
+    </div>
+</app-list-films-container>
+

@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="header">
+        <h1>{{ film.title }} ({{ film.year }})</h1>
+    </div>
+    <div class="body">
+        <div class="poster">
+            <img [src]="film.cover" [ngStyle]="{width: '400px'}" />
+        </div>
+        <div class="content">
+            <ul>
+                <li>
+                    <span class="list-title">Актёры:</span>
+                    {{ film.actors }}
+                </li>
+                <li>
+                    <span class="list-title">Награды:</span>
+                    {{ film.awards }}
+                </li>
+                <li>
+                    <span class="list-title">Страна:</span>
+                    {{ film.country }}
+                </li>
+                <li>
+                    <span class="list-title">Режиссёр:</span>
+                    {{ film.director }}
+                </li>
+                <li>
+                    <span class="list-title">Жанр:</span>
+                    {{ film.genre }}
+                </li>
+                <li>
+                    <span class="list-title">Язык:</span>
+                    {{ film.language }}
+                </li>
+                <li>
+                    <span class="list-title">Рейтинг IMDB:</span>
+                    {{ film.rating }}
+                </li>
+                <li>
+                    <span class="list-title">Продолжительность:</span>
+                    {{ film.runtime }}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

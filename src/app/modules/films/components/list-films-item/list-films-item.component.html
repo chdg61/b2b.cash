@@ -1,0 +1,18 @@
+<mat-card class="card">
+    <mat-card-header>
+        <mat-card-title>
+            {{ film.title }}
+        </mat-card-title>
+        <mat-card-subtitle>Год: {{ film.year }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="film.cover">
+    <mat-card-actions>
+        <button mat-button color="primary" (click)="onClick($event)">
+            Подробнее
+        </button>
+        <button mat-button color="warn" (click)="onDelete($event)">
+            Удалить
+        </button>
+    </mat-card-actions>
+</mat-card>
+

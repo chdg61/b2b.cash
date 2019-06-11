@@ -1,0 +1,22 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <mat-form-field class="example-full-width" floatLabel="never">
+            <input
+                type="text"
+                placeholder="Введите название фильма"
+                aria-label="Number"
+                matInput
+                [formControl]="searchControl"
+                [matAutocomplete]="auto"
+            >
+            <mat-autocomplete
+                #auto="matAutocomplete"
+                (optionSelected)="optionSelected($event)"
+            >
+                <mat-option *ngFor="let film of films" [value]="film">
+                    {{film.title}} ({{film.year}})
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </mat-toolbar-row>
+</mat-toolbar>

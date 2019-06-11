@@ -1,0 +1,35 @@
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+
+    &__body {
+        max-width: 780px;
+    }
+
+    .header {
+        width: 100%;
+
+    }
+
+    .body {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+
+        .poster {
+            flex-basis: 40%;
+        }
+
+        .content {
+            li {
+                list-style: none;
+            }
+            .list-title {
+                font-weight: 500;
+            }
+        }
+    }
+}

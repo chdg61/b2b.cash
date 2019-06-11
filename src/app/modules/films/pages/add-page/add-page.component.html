@@ -1,0 +1,19 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <app-back-arrow
+            (click)="toList()"
+        ></app-back-arrow>
+        К списку фильмов
+    </mat-toolbar-row>
+</mat-toolbar>
+<div *ngIf="film; then addDetailPage else notFound"></div>
+
+<ng-template #addDetailPage>
+    <app-detail-page
+        [film]="film"
+    ></app-detail-page>
+</ng-template>
+
+<ng-template #notFound>
+    Нет информации
+</ng-template>
