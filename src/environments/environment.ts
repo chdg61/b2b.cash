@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false,
-    apiPath: 'http://www.omdbapi.com/',
+    apiPath: 'https://www.omdbapi.com/',
     apiKey: 'a567a796'
 };
 
